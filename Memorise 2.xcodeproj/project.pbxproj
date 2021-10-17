@@ -11,6 +11,8 @@
 		6F19A552271C189E00CEF417 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19A551271C189E00CEF417 /* ContentView.swift */; };
 		6F19A554271C189F00CEF417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F19A553271C189F00CEF417 /* Assets.xcassets */; };
 		6F19A557271C189F00CEF417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F19A556271C189F00CEF417 /* Preview Assets.xcassets */; };
+		6F19A561271C251400CEF417 /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19A560271C251400CEF417 /* CardGame.swift */; };
+		6F19A563271C252E00CEF417 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F19A562271C252E00CEF417 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6F19A551271C189E00CEF417 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F19A553271C189F00CEF417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F19A556271C189F00CEF417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F19A560271C251400CEF417 /* CardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
+		6F19A562271C252E00CEF417 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		6F19A55F271C190A00CEF417 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6F19A560271C251400CEF417 /* CardGame.swift */,
+				6F19A562271C252E00CEF417 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			files = (
 				6F19A552271C189E00CEF417 /* ContentView.swift in Sources */,
 				6F19A550271C189E00CEF417 /* Memorise_2App.swift in Sources */,
+				6F19A561271C251400CEF417 /* CardGame.swift in Sources */,
+				6F19A563271C252E00CEF417 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
