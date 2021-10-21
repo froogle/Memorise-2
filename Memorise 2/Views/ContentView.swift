@@ -14,6 +14,17 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
+            HStack {
+                Spacer()
+                Text(store.selectedTheme).font(.headline)
+                Spacer()
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    VStack {
+                        Image(systemName: "plus.diamond").font(.title)
+                        Text("New Game").font(.caption)
+                    }
+                }
+            }.padding([.top, .leading, .trailing])
             LazyVGrid(columns: [cell]) {
                 ForEach(store.cardGame.deck) { card in
                     CardView(card: card )
@@ -23,6 +34,7 @@ struct ContentView: View {
                 }
             }.padding()
         }
+        
     }
 }
 
