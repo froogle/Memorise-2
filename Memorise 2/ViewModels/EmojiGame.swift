@@ -33,10 +33,5 @@ class EmojiGame : ObservableObject {
     
     func choose( card: Card<String> ) {
         cardGame.choose(card: card)
-    }
-    
-    private func buildCardGame(using: String) {
-
-    }
-    
+    }    
 }
