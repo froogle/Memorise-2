@@ -9,8 +9,12 @@ import Foundation
 
 class EmojiGame : ObservableObject {
     @Published var cardGame: CardGame<String>
+    @Published var selectedTheme: String
         
     init(_ themeName: String) {
+        
+        selectedTheme = themeName
+        
         let themes = [
             Theme(name: "Travel", emojis: ["✈️", "🚀", "🚘", "🚎", "🚛", "🚐", "⛴", "🏍", "🚁", "🚂"], pairs: 6),
             Theme(name: "Ballgames", emojis: ["⚽️", "🏉", "🎱", "🏐", "🏀", "⚾️", "🏈", "🎾"], pairs: 7),
