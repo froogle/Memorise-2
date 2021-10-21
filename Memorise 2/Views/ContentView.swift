@@ -17,7 +17,7 @@ struct ContentView: View {
             Spacer()
             Text(store.selectedTheme).font(.headline)
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: { store.resetGame() }) {
                 VStack {
                     Image(systemName: "plus.diamond").font(.title)
                     Text("New Game").font(.caption)
@@ -69,7 +69,7 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     
-    static let game = EmojiGame("Technology")
+    static let game = EmojiGame(theme: themes[0])
     static var previews: some View {
         ContentView(store: game)
     }
