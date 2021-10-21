@@ -6,17 +6,22 @@
 //
 
 import Foundation
-struct Card<T> {
+struct Card<T> : Identifiable{    
     var id: Int
     var isFaceUp: Bool = false
     var isMatched: Bool = false
     var content: T
     
-    mutating func choose() {
-        self.isFaceUp.toggle()
+    var isFlippable:Bool {
+        return !(isMatched || isFaceUp)
     }
     
-    mutating func match() {
-        self.isMatched.toggle()
+    func containsTheSame(_ otherContent: T ) -> Bool {
+        if let thisContent = content as? String {
+            if let thatContent = otherContent as? String {
+                return thatContent == thisContent
+            }
+        }
+        return false
     }
 }
