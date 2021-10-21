@@ -12,19 +12,23 @@ struct ContentView: View {
     
     let cell = GridItem(.adaptive(minimum: 80))
     
+    fileprivate func titleSection() -> some View {
+        return HStack {
+            Spacer()
+            Text(store.selectedTheme).font(.headline)
+            Spacer()
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                VStack {
+                    Image(systemName: "plus.diamond").font(.title)
+                    Text("New Game").font(.caption)
+                }
+            }
+        }.padding([.top, .leading, .trailing])
+    }
+    
     var body: some View {
         ScrollView {
-            HStack {
-                Spacer()
-                Text(store.selectedTheme).font(.headline)
-                Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    VStack {
-                        Image(systemName: "plus.diamond").font(.title)
-                        Text("New Game").font(.caption)
-                    }
-                }
-            }.padding([.top, .leading, .trailing])
+            titleSection()
             LazyVGrid(columns: [cell]) {
                 ForEach(store.cardGame.deck) { card in
                     CardView(card: card )
