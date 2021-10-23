@@ -8,7 +8,7 @@
 import Foundation
 struct CardGame<T> {
     private(set) var deck: [Card<T>]
-
+    
     init( values: Array<T>, pairs: Int) {
         let tempArray = values.shuffled()
         
@@ -26,16 +26,13 @@ struct CardGame<T> {
     
     // MARK: State Mutators
     mutating func choose( card: Card<T> ) {
-        
         if !card.isFlippable { return }
         
         resetDeck()
         
-        if let cardIndex = index(of: card) {
-            deck[cardIndex].isFaceUp = true
-            checkIfDeckHasAMatchFor(cardIndex)
-        }
-        
+        let cardIndex: Int! = index(of: card)
+        deck[cardIndex].isFaceUp = true
+        checkIfDeckHasAMatchFor(cardIndex)
     }
     
     // MARK: Private helper methods
@@ -50,11 +47,9 @@ struct CardGame<T> {
     }
     
     mutating private func checkIfDeckHasAMatchFor(_ cardIndex: Int) {
-        if let firstCard = firstCardIndex  {
-            if deck[cardIndex].containsTheSame(deck[firstCard].content) {
-                deck[cardIndex].isMatched = true
-                deck[firstCard].isMatched = true
-            }
+        if let firstCard = firstCardIndex, deck[cardIndex].hasTheSameFaceValueAs(deck[firstCard].content)  {
+            deck[cardIndex].isMatched = true
+            deck[firstCard].isMatched = true
         } else {
             firstCardIndex = cardIndex
         }

@@ -16,7 +16,7 @@ struct Card<T> : Identifiable{
         return !(isMatched || isFaceUp)
     }
     
-    func containsTheSame(_ otherContent: T ) -> Bool {
+    func hasTheSameFaceValueAs(_ otherContent: T ) -> Bool {
         if let thisContent = content as? String {
             if let thatContent = otherContent as? String {
                 return thatContent == thisContent
